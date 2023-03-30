@@ -1,0 +1,31 @@
+{% load static %}
+{% block title %} ГЛАВНАЯ СТРАНИЦА  {% endblock %}  
+
+{% block head %}   {% endblock %}
+
+
+
+{% block content %}   
+
+<h1> ГЛАВНАЯ СТРАНИЦА </h1>
+
+<center>
+{% for i in data  %}
+<h1><a href="category/{{ i.cat_id}}"> {{ i.name }} </a></h1>
+{% endfor %}
+
+{% for category in object_list %}
+
+
+<h1>{{ <category class="cat_id"></category> }} </a></h1>
+
+<h1><a href="{{ category.name }}"> {{ i.name }} </a></h1>
+
+<img src="{{ category.img.url}}" width="300" height="300" alt="...">
+  {% endfor %}
+
+
+</center>
+
+{% endblock %}
+

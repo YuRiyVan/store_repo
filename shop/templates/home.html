@@ -1,0 +1,18 @@
+
+<center>
+<h1>ДОМАШНЯЯ СТРАНИЦА</h1>
+
+
+<ul>
+  {% for category in object_list %}
+
+  <h1>{{ category.cat_id }} </h1>
+
+   <h1><a href="category/"> {{ category.name}} </a></h1>
+
+   <img src="{{ category.img.url}}" width="300" height="300" alt="...">
+
+  {% endfor %}
+</ul>
+</center>
+

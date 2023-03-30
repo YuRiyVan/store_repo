@@ -1,0 +1,26 @@
+{% load static %}
+
+{% block title %} <center> <h1>КАТАЛОГ ТОВАРОВ </h1> </center> {% endblock %}  
+
+{% block head %}   {% endblock %}
+
+
+
+{% block content %}  
+
+
+<div>
+    {% for product in object_list %}
+    <h1>{{ product.cat_id }}</h1>
+    <a href="product/"> <h1>{{ product.name }}</h1></a>
+    <h1>{{ product.description }}</h1>
+    <h1>{{ product.price }}</h1>
+    <img src="{{ product.img.url}}" width="200" height="200" alt="..."> 
+       
+    
+    {% endfor %}
+</div>
+
+
+{% endblock %}
+
